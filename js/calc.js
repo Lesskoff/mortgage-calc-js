@@ -53,15 +53,16 @@ function calc(event) {
         break;
       }
 
+      const PRICE     = document.querySelector('#estate-price-input').value * 1000000, // Стоимость недвижимости
+            PAY       = document.querySelector('#initial-fee-input').value * 1000000,  // Первоначальный платеж
+            PERCENT   = percent,                                                       // Процентная ставка
+            INSURANCE = PRICE / 100 * insurance,                                       // Страховка
+            YEARS     = document.querySelector('#credit-term-input').value;            // Срок кредита
+
       // Если процент первоначального взноса соответсвует заданному банком, то делаем вычисление
-      if(PERCENT_CUURENT_PAY >= rate) {
+      if(PERCENT_CUURENT_PAY >= rate && PRICE > PAY) {
 
-        const PRICE     = document.querySelector('#estate-price-input').value * 1000000, // Стоимость недвижимости
-              PAY       = document.querySelector('#initial-fee-input').value * 1000000,  // Первоначальный платеж
-              PERCENT   = percent,                                                       // Процентная ставка
-              INSURANCE = PRICE / 100 * insurance,                                       // Страховка
-              YEARS     = document.querySelector('#credit-term-input').value;            // Срок кредита
-
+        // Собственно функция ипотечного вычисления
         function ipoteka( price, pay, percent, years ) {
           var i = parseFloat( percent / 100 / 12 );
           var n = parseFloat( years * 12 );
@@ -69,6 +70,7 @@ function calc(event) {
           return r.toFixed(2);
         }
 
+        // Пушим результаты в массив с результатами
         resultArray.push({
           name: NAME,
           price: PRICE,
@@ -85,7 +87,7 @@ function calc(event) {
 
     for (key in resultArray) {
 
-      document.querySelector('#result').insertAdjacentHTML('beforeend', `
+      resultHTML.insertAdjacentHTML('beforeend', `
         <div class="row justify-content-between flex-nowrap">
           <div class="col">Название банка: <b>${resultArray[key].name}</b></div>
           <div class="col">Процентная ставка банка:  <b>${resultArray[key].percent}%</b></div>
@@ -98,6 +100,12 @@ function calc(event) {
       `);
     
     }
+
+    if (resultArray.length <= 0) {
+      resultHTML.innerHTML = 'По вашему запросу результаты не найдены'
+    }
+
+    console.log(resultArray)
 
   });
 

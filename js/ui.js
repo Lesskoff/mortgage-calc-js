@@ -7,7 +7,7 @@ var instances = M.FormSelect.init(elems /*, options */);
 // Стоимость недвижимости - слайдер
 var estatePriceSlider = document.getElementById("estate-price-slider");
 noUiSlider.create(estatePriceSlider, {
-  start: 10,
+  start: 5,
   connect: [true, false],
   step: 0.1,
   orientation: "horizontal", // 'horizontal' or 'vertical'
@@ -34,7 +34,7 @@ estatePriceInputFormat.addEventListener('change', () => {
 // Первоначальный взнос - слайдер
 var initialFeeSlider = document.getElementById("initial-fee-slider");
 noUiSlider.create(initialFeeSlider, {
-  start: 1.2,
+  start: 0.5,
   connect: [true, false],
   step: 0.1,
   orientation: "horizontal", // 'horizontal' or 'vertical'
