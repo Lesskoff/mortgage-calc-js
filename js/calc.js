@@ -105,8 +105,6 @@ function calc(event) {
       resultHTML.innerHTML = 'По вашему запросу результаты не найдены'
     }
 
-    console.log(resultArray)
-
   });
 
 }
