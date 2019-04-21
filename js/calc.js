@@ -88,15 +88,20 @@ function calc(event) {
     for (key in resultArray) {
 
       resultHTML.insertAdjacentHTML('beforeend', `
-        <div class="row justify-content-between flex-nowrap">
-          <div class="col">Название банка: <b>${resultArray[key].name}</b></div>
-          <div class="col">Процентная ставка банка:  <b>${resultArray[key].percent}%</b></div>
-          <div class="col">Ежемесячный платеж: <b>${resultArray[key].monthlyPayment} руб</b></div>
-          <div class="col">Стоимость страховки: <b>${resultArray[key].insurance} руб</b></div>
-          <div class="col">Общая сумма кредита: <b>${resultArray[key].price} руб</b></div>
-          <div class="col">Первый платеж: <b>${resultArray[key].pay} руб</b></div>
-          <div class="col">Срок кредита: <b>${resultArray[key].years} лет</b></div>
-        </div>
+        <table class="table table-dark">
+          <tbody>
+            <tr>
+            <th scope="row">${Number(key) + 1}</th>
+            <td>Название банка: <b>${resultArray[key].name}</b></td>
+            <td>Процентная ставка банка:  <b>${resultArray[key].percent}%</b></td>
+            <td>Ежемесячный платеж: <b>${resultArray[key].monthlyPayment} руб</b></td>
+            <td>Стоимость страховки: <b>${resultArray[key].insurance} руб</b></td>
+            <td>Общая сумма кредита: <b>${resultArray[key].price} руб</b></td>
+            <td>Первый платеж: <b>${resultArray[key].pay} руб</b></td>
+            <td>Срок кредита: <b>${resultArray[key].years} лет</b></td>
+          </tr>
+          </tbody>
+        </table>
       `);
     
     }
