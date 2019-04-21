@@ -63,14 +63,14 @@ var creditTermSlider = document.getElementById("credit-term-slider");
 noUiSlider.create(creditTermSlider, {
   start: 15,
   connect: [true, false],
-  step: 0.1,
+  step: 1,
   orientation: "horizontal", // 'horizontal' or 'vertical'
   range: {
     min: 5,
-    max: 40
+    max: 50
   },
   format: wNumb({
-    decimals: 1
+    decimals: 0
   })
 });
 
