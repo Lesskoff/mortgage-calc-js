@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mortgage calculator</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <!-- <link rel="stylesheet" href="https://refreshless.com/nouislider/distribute/nouislider.min.css" /> -->
+  <link rel="stylesheet" href="https://materializecss.com/extras/noUiSlider/nouislider.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1>Mortgage Calculator</h1>
+    </div>
+    <div class="row justify-content-between">
+      <div class="form-side col-4">
+        <div class="row justify-content-center">
+          <h4>Параметры</h4>
+        </div>
+        <form id="calc-form" action="" class="mt-5">
+          <div class="row">
+            <div class="input-field">
+              <select id="estate-type-select">
+                <!-- <option value="" disabled selected>Цель жилья</option> -->
+                <option value="tipNedvhizh-pervichka">Первичка</option>
+                <option value="tipNedvhizh-vtorichka">Вторичка</option>
+              </select>
+              <label>Выберите цель жилья</label>
+            </div>
+          </div>
+          <div class="row flex-column">
+            <div class="estate-price mb-5">
+              <p>Стоимость недвижимости</p>
+              <div id="estate-price-slider"></div>
+              <input title="Стоимость недвижимости" id="estate-price-input">
+            </div>
+            <div class="initial-fee mb-5">
+              <p>Первоначальный взнос</p>
+              <div id="initial-fee-slider"></div>
+              <input title="Первоначальный взнос" id="initial-fee-input">
+            </div>
+            <div class="credit-term mb-5">
+              <p>Срок кредита</p>
+              <div id="credit-term-slider"></div>
+              <input title="Срок кредита" id="credit-term-input">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field">
+              <select id="employment-type-select">
+                <!-- <option value="" disabled selected>Тип занятости</option> -->
+                <option value="tipZan-rabotnik">Работник</option>
+                <option value="tipZan-indP">Индивидуальный предприниматель</option>
+                <option value="tipZan-sobstvennik">Собственник бизнеса</option>
+              </select>
+              <label>Выберите свой тип занятости</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="result-side col-8">
+        <div class="row justify-content-center">
+          <h4>Результат</h4>
+        </div>
+        <div id="result" style="overflow-x: scroll;">
+          <div class="row justify-content-between">
+            <div class="col">Название банка: Абсолют Банк</div>
+            <div class="col">Процентная ставка банка: 11%</div>
+            <div class="col">Ежемесячный платеж: 15000 руб</div>
+            <div class="col">Стоимость страховки: 45000 руб</div>
+            <div class="col">Общая сумма кредита: 5 000 000 руб</div>
+            <div class="col">Первый платеж: 50 000 руб</div>
+            <div class="col">Срок кредита: 14 лет</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- <script src="https://refreshless.com/nouislider/distribute/nouislider.min.js"></script> -->
+  <script src="https://materializecss.com/extras/noUiSlider/nouislider.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/calc.js"></script>
+</body>
+</html>

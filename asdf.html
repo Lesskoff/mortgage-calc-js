@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mortgage calculator</title>
+</head>
+<body>
+    <form>
+      <input type=text name=a>
+      <input type=radio name=b value=1>
+      <input type=radio name=b value=2>
+      <input type=radio name=b value=3>
+      <input type=checkbox name=c value=4>
+      <input type=checkbox name=c value=5>
+      <input type=checkbox name=c value=6>
+      <select>
+        <option>Цель жилья</option>
+        <option>Первичка</option>
+        <option>Вторичка</option>
+      </select>
+    </form>
+
+    <script>
+      function handle(event) {
+        // if (event.target.tagName === 'INPUT') {
+          console.log(event.type, event.target);
+        // }
+      }
+      
+      document.querySelector('form').addEventListener('change', handle);
+      // document.querySelector('form').addEventListener('input', handle);
+    </script>
+</body>
+</html>

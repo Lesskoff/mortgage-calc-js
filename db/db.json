@@ -1,0 +1,645 @@
+{
+  "tipNedvhizh-pervichka": {
+    "tipZan-rabotnik": {
+      "absolutBank": {
+        "name": "Абсолют Банк",
+        "rate": {
+          "20": 11.5
+        },
+        "insurance": 1.5
+      },
+      "akBarsBank": {
+        "name": "Ак Барс Банк",
+        "rate": {
+          "10": 11.8,
+          "20": 10.8,
+          "20.01": 10.5
+        },
+        "insurance": 0.8
+      },
+      "bankRussia": {
+        "name": "Банк Россия",
+        "rate": {
+          "15": 10.3
+        },
+        "insurance": 0.6
+      },
+      "gazprombank": {
+        "name": "Газпром Банк",
+        "rate": {
+          "15": 10.3,
+          "40": 10
+        },
+        "insurance": 0.19
+      },
+      "deltakredit": {
+        "name": "Дельтакредит",
+        "rate": {
+          "15": 9.5
+        },
+        "insurance": 0.6
+      },
+      "domRF": {
+        "name": "Дом.рф",
+        "rate": {
+          "15": 11.75,
+          "20": 10.9
+        },
+        "insurance": 1
+      },
+      "investTorg": {
+        "name": "ИнвестторгБанк",
+        "rate": {
+          "20": 10.95,
+          "30": 10.45,
+          "40": 10.2
+        },
+        "insurance": 0.5
+      },
+      "otkritie": {
+        "name": "Открытие",
+        "rate": {
+          "20": 10.2
+        },
+        "insurance": 0.3
+      },
+      "raiffeisen": {
+        "name": "Райффайзен",
+        "rate": {
+          "15": 10.49
+        },
+        "insurance": 0.4
+      },
+      "rosSelHoz": {
+        "name": "Россельхозбанк",
+        "rate": {
+          "20": 10
+        },
+        "insurance": 1
+      },
+      "svyazBank": {
+        "name": "Связьбанк",
+        "rate": {
+          "15": 10.75
+        },
+        "insurance": 0.5
+      },
+      "sovKomBank": {
+        "name": "Совкомбанк",
+        "rate": {
+          "10": 11.5,
+          "20": 10.9
+        },
+        "insurance": 0.8
+      },
+      "timerBank": {
+        "name": "Тимербанк",
+        "rate": {
+          "15": 11.15
+        },
+        "insurance": 1.2
+      },
+      "uralSib": {
+        "name": "Уралсиб",
+        "rate": {
+          "15": 10.9
+        },
+        "insurance": 0.3
+      },
+      "energoBank": {
+        "name": "Энергобанк",
+        "rate": {
+          "15": 10.9
+        },
+        "insurance": 0.2
+      },
+      "uniCredit": {
+        "name": "Юникредит",
+        "rate": {
+          "20": 10
+        },
+        "insurance": 0.3
+      }
+    },
+    "tipZan-indP": {
+      "absolutBank": {
+        "name": "Абслют Банк",
+        "rate": {
+          "20": 12.5
+        },
+        "insurance": 1.5
+      },
+      "akBarsBank": {
+        "name": "Ак Барс Банк",
+        "rate": {
+          "20": 12.3,
+          "30": 11.3,
+          "30.01": 11
+        },
+        "insurance": 0.8
+      },
+      "gazprombank": {
+        "name": "Газпромбанк",
+        "rate": {
+          "15": 10.3,
+          "40": 10
+        },
+        "insurance": 0.19
+      },
+      "deltakredit": {
+        "name": "Дельтакредит",
+        "rate": {
+          "15": 12.75,
+          "20": 11.75
+        },
+        "insurance": 0.6
+      },
+      "domRF": {
+        "name": "Дом.рф",
+        "rate": {
+          "35": 11.75
+        },
+        "insurance": 1
+      },
+      "raiffeisen": {
+        "name": "Райффайзен",
+        "rate": {
+          "15": 10.49
+        },
+        "insurance": 0.4
+      },
+      "rosSelHoz": {
+        "name": "Россельхоз",
+        "rate": {
+          "20": 10
+        },
+        "insurance": 1
+      },
+      "sovKomBank": {
+        "minPV": 10,
+        "name": "Совкомбанк",
+        "rate": {
+          "default": 11.5,
+          "20": 10.9
+        },
+        "insurance": 0.8
+      },
+      "timerBank": {
+        "name": "Тимербанк",
+        "rate": {
+          "15": 11.5
+        },
+        "insurance": 1.2
+      },
+      "uralSib": {
+        "name": "Уралсиб",
+        "rate": {
+          "25": 10.9
+        },
+        "insurance": 0.3
+      },
+      "energoBank": {
+        "name": "Энергобанк",
+        "rate": {
+          "15": 11.9
+        },
+        "insurance": 0.2
+      },
+      "uniCredit": {
+        "name": "Юникредит",
+        "rate": {
+          "50": 10
+        },
+        "insurance": 0.3
+      }
+    },
+    "tipZan-sobstvennik": {
+      "absolutBank": {
+        "name": "Абсолютбанк",
+        "rate": {
+          "20": 12.5
+        },
+        "insurance": 1.5
+      },
+      "akBarsBank": {
+        "name": "Ак Барс Банк",
+        "rate": {
+          "20": 12.3,
+          "30": 11.3,
+          "30.01": 11
+        },
+        "insurance": 0.8
+      },
+      "gazprombank": {
+        "name": "Газпром банк",
+        "rate": {
+          "15": 10.3,
+          "40": 10
+        },
+        "insurance": 0.19
+      },
+      "deltakredit": {
+        "name": "Дельтакредит",
+        "rate": {
+          "15": 12.75,
+          "20": 11.75
+        },
+        "insurance": 0.6
+      },
+      "domRF": {
+        "name": "Дом.рф",
+        "rate": {
+          "35": 11.75
+        },
+        "insurance": 1
+      },
+      "raiffeisen": {
+        "name": "Райффайзен",
+        "rate": {
+          "15": 10.49
+        },
+        "insurance": 0.4
+      },
+      "rosSelHoz": {
+        "name": "Россельхоз",
+        "rate": {
+          "20": 10
+        },
+        "insurance": 1
+      },
+      "sovKomBank": {
+        "minPV": 10,
+        "name": "Совкомбанк",
+        "rate": {
+          "default": 11.5,
+          "20": 10.9
+        },
+        "insurance": 0.8
+      },
+      "timerBank": {
+        "name": "Тимербанк",
+        "rate": {
+          "15": 11.5
+        },
+        "insurance": 1.2
+      },
+      "uralSib": {
+        "name": "Уралсиб",
+        "rate": {
+          "25": 10.9
+        },
+        "insurance": 0.3
+      },
+      "energoBank": {
+        "name": "Энергобанк",
+        "rate": {
+          "15": 11.9
+        },
+        "insurance": 0.2
+      },
+      "uniCredit": {
+        "name": "Юникредит",
+        "rate": {
+          "50": 10
+        },
+        "insurance": 0.3
+      }
+    }
+  },
+  "tipNedvhizh-vtorichka": {
+    "tipZan-rabotnik": {
+      "absolutBank": {
+        "name": "Абсолют Банк",
+        "rate": {
+          "20": 10.49
+        },
+        "insurance": 1.5
+      },
+      "akBarsBank": {
+        "name": "Ак Барс Банк",
+        "rate": {
+          "10": 12.2,
+          "20": 11.2
+        },
+        "insurance": 0.8
+      },
+      "bankRussia": {
+        "name": "Банк Россия",
+        "rate": {
+          "20": 10
+        },
+        "insurance": 0.6
+      },
+      "bzhf": {
+        "name": "БЖФ",
+        "rate": {
+          "20": 12
+        },
+        "insurance": 0.6
+      },
+      "gazprombank": {
+        "name": "Газпромбанк",
+        "rate": {
+          "15": 10.3
+        },
+        "insurance": 0.19
+      },
+      "deltakredit": {
+        "name": "Дельтакредит",
+        "rate": {
+          "15": 9.5
+        },
+        "insurance": 0.6
+      },
+      "domRF": {
+        "name": "Дом.рф",
+        "rate": {
+          "15": 11.75,
+          "20": 10.9
+        },
+        "insurance": 1
+      },
+      "investTorg": {
+        "name": "Инвестторгбанк",
+        "rate": {
+          "20": 10.95,
+          "30": 10.45,
+          "40": 10.2
+        },
+        "insurance": 0.5
+      },
+      "otkritie": {
+        "name": "Открытие",
+        "rate": {
+          "20": 10
+        },
+        "insurance": 0.3
+      },
+      "raiffeisen": {
+        "name": "Райффайзен",
+        "rate": {
+          "15": 10.25
+        },
+        "insurance": 0.4
+      },
+      "rosSelHoz": {
+        "name": "Россельхоз",
+        "rate": {
+          "20": 10
+        },
+        "insurance": 1
+      },
+      "svyazBank": {
+        "name": "Связьбанк",
+        "rate": {
+          "15": 10.75
+        },
+        "insurance": 0.5
+      },
+      "sovKomBank": {
+        "name": "Совкомбанк",
+        "rate": {
+          "10": 11.59
+        },
+        "insurance": 0.8
+      },
+      "timerBank": {
+        "name": "Тимербанк",
+        "rate": {
+          "20": 9.99
+        },
+        "insurance": 1.2
+      },
+      "uralSib": {
+        "name": "Уралсиб",
+        "rate": {
+          "15": 11.4
+        },
+        "insurance": 0.3
+      },
+      "energoBank": {
+        "name": "Энергобанк",
+        "rate": {
+          "15": 10.9
+        },
+        "insurance": 0.2
+      },
+      "uniCredit": {
+        "name": "Юникредит",
+        "rate": {
+          "15": 10.5
+        },
+        "insurance": 0.3
+      }
+    },
+    "tipZan-indP": {
+      "absolutBank": {
+        "name": "Абсолют Банк",
+        "rate": {
+          "20": 12.5
+        },
+        "insurance": 1.5
+      },
+      "akBarsBank": {
+        "name": "Ак Барс Банк",
+        "rate": {
+          "20": 12.7,
+          "30": 11.7
+        },
+        "insurance": 0.8
+      },
+      "bzhf": {
+        "name": "БЖФ",
+        "rate": {
+          "30": 13.5
+        },
+        "insurance": 0.8
+      },
+      "gazprombank": {
+        "name": "Газпромбанк",
+        "rate": {
+          "15": 10.3,
+          "40": 10
+        },
+        "insurance": 0.19
+      },
+      "deltakredit": {
+        "name": "Дельтакредит",
+        "rate": {
+          "15": 12.75,
+          "20": 11.75
+        },
+        "insurance": 0.6
+      },
+      "domRF": {
+        "name": "Дом.рф",
+        "rate": {
+          "35": 11.75
+        },
+        "insurance": 1
+      },
+      "investTorg": {
+        "name": "Инвестторг",
+        "rate": {
+          "20": 11.45,
+          "30": 10.95,
+          "40": 10.45
+        },
+        "insurance": 1
+      },
+      "otkritie": {
+        "name": "Открытие",
+        "rate": {
+          "30": 11
+        },
+        "insurance": 0.3
+      },
+      "raiffeisen": {
+        "name": "Райффайзен",
+        "rate": {
+          "25": 10.25
+        },
+        "insurance": 0.4
+      },
+      "rosSelHoz": {
+        "name": "Россельхоз",
+        "rate": {
+          "20": 10
+        },
+        "insurance": 1
+      },
+      "sovKomBank": {
+        "name": "Совкомбанк",
+        "rate": {
+          "10": 11.9
+        },
+        "insurance": 0.8
+      },
+      "timerBank": {
+        "name": "Тимербанк",
+        "rate": {
+          "20": 9.99
+        },
+        "insurance": 1.2
+      },
+      "energoBank": {
+        "name": "Энергобанк",
+        "rate": {
+          "15": 11.9
+        },
+        "insurance": 0.2
+      },
+      "uniCredit": {
+        "name": "Юникредит",
+        "rate": {
+          "50": 10.5
+        },
+        "insurance": 0.3
+      }
+    },
+    "tipZan-sobstvennik": {
+      "absolutBank": {
+        "name": "Абсолютбанк",
+        "rate": {
+          "20": 12.5
+        },
+        "insurance": 1.5
+      },
+      "akBarsBank": {
+        "name": "Ак Барс Банк",
+        "rate": {
+          "20": 12.7,
+          "30": 11.7
+        },
+        "insurance": 0.8
+      },
+      "bzhf": {
+        "name": "БЖФ",
+        "rate": {
+          "30": 13.5
+        },
+        "insurance": 0.8
+      },
+      "gazprombank": {
+        "name": "Газпромбанк",
+        "rate": {
+          "15": 10.3
+        },
+        "insurance": 0.19
+      },
+      "deltakredit": {
+        "name": "Дельтакредит",
+        "rate": {
+          "15": 12.75,
+          "20": 11.75
+        },
+        "insurance": 0.6
+      },
+      "domRF": {
+        "name": "Дом.рф",
+        "rate": {
+          "35": 11.75
+        },
+        "insurance": 1
+      },
+      "investTorg": {
+        "name": "Инвестторг",
+        "rate": {
+          "20": 11.45,
+          "30": 10.95,
+          "40": 10.45
+        },
+        "insurance": 1
+      },
+      "otkritie": {
+        "name": "Открытие",
+        "rate": {
+          "30": 11
+        },
+        "insurance": 0.3
+      },
+      "raiffeisen": {
+        "name": "Райффайзен",
+        "rate": {
+          "25": 10.25
+        },
+        "insurance": 0.4
+      },
+      "rosSelHoz": {
+        "name": "Россельхоз",
+        "rate": {
+          "20": 10
+        },
+        "insurance": 1
+      },
+      "sovKomBank": {
+        "name": "Совкомбанк",
+        "rate": {
+          "10": 11.9
+        },
+        "insurance": 0.8
+      },
+      "timerBank": {
+        "name": "Тимербанк",
+        "rate": {
+          "20": 9.99
+        },
+        "insurance": 1.2
+      },
+      "energoBank": {
+        "name": "Энергобанк",
+        "rate": {
+          "15": 11.9
+        },
+        "insurance": 0.2
+      },
+      "uniCredit": {
+        "name": "Юникредит",
+        "rate": {
+          "50": 10.5
+        },
+        "insurance": 0.3
+      }
+    }
+  }
+}
