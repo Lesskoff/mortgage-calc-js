@@ -10,7 +10,7 @@ function calc(event) {
 
   axios.get(URL).then(response => {
 
-    let resultHTML = document.querySelector('#result');
+    let resultHTML = document.querySelector('#result #res-table');
     resultHTML.innerHTML = '';
     
     const ESTATE_TYPE_SELECT     = document.querySelector('#estate-type-select').value,
@@ -88,20 +88,16 @@ function calc(event) {
     for (key in resultArray) {
 
       resultHTML.insertAdjacentHTML('beforeend', `
-        <table class="table table-dark">
-          <tbody>
-            <tr>
-            <th scope="row">${Number(key) + 1}</th>
-            <td>Название банка: <b>${resultArray[key].name}</b></td>
-            <td>Процентная ставка банка:  <b>${resultArray[key].percent}%</b></td>
-            <td>Ежемесячный платеж: <b>${resultArray[key].monthlyPayment} руб</b></td>
-            <td>Стоимость страховки: <b>${resultArray[key].insurance} руб</b></td>
-            <td>Общая сумма кредита: <b>${resultArray[key].price} руб</b></td>
-            <td>Первый платеж: <b>${resultArray[key].pay} руб</b></td>
-            <td>Срок кредита: <b>${resultArray[key].years} лет</b></td>
-          </tr>
-          </tbody>
-        </table>
+        <tr>
+          <th scope="row">${Number(key) + 1}</th>
+          <td>${resultArray[key].name}</td>
+          <td>${resultArray[key].percent}%</td>
+          <td>${resultArray[key].monthlyPayment} руб</td>
+          <td>${resultArray[key].insurance} руб</td>
+          <td>${resultArray[key].price} руб</td>
+          <td>${resultArray[key].pay} руб</td>
+          <td>${resultArray[key].years} лет</td>
+        </tr>
       `);
     
     }
