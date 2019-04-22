@@ -87,18 +87,33 @@ function calc(event) {
 
     for (key in resultArray) {
 
+      if (key % 2 === 0) {
       resultHTML.insertAdjacentHTML('beforeend', `
         <tr>
           <th scope="row">${Number(key) + 1}</th>
-          <td>${resultArray[key].name}</td>
-          <td>${resultArray[key].percent}%</td>
-          <td>${resultArray[key].monthlyPayment} руб</td>
-          <td>${resultArray[key].insurance} руб</td>
-          <td>${resultArray[key].price} руб</td>
-          <td>${resultArray[key].pay} руб</td>
-          <td>${resultArray[key].years} лет</td>
+          <td class="animated fadeInLeft faster">${resultArray[key].name}</td>
+          <td class="animated fadeInLeft faster">${resultArray[key].percent}%</td>
+          <td class="animated fadeInLeft faster">${resultArray[key].monthlyPayment} руб</td>
+          <td class="animated fadeInLeft faster">${resultArray[key].insurance} руб</td>
+          <td class="animated fadeInLeft faster">${resultArray[key].price} руб</td>
+          <td class="animated fadeInLeft faster">${resultArray[key].pay} руб</td>
+          <td class="animated fadeInLeft faster">${resultArray[key].years} лет</td>
         </tr>
       `);
+      } else {
+        resultHTML.insertAdjacentHTML('beforeend', `
+        <tr>
+          <th scope="row">${Number(key) + 1}</th>
+          <td class="animated fadeInRight faster">${resultArray[key].name}</td>
+          <td class="animated fadeInRight faster">${resultArray[key].percent}%</td>
+          <td class="animated fadeInRight faster">${resultArray[key].monthlyPayment} руб</td>
+          <td class="animated fadeInRight faster">${resultArray[key].insurance} руб</td>
+          <td class="animated fadeInRight faster">${resultArray[key].price} руб</td>
+          <td class="animated fadeInRight faster">${resultArray[key].pay} руб</td>
+          <td class="animated fadeInRight faster">${resultArray[key].years} лет</td>
+        </tr>
+      `);
+      }
     
     }
 
@@ -114,6 +129,6 @@ calc();
 
 // Считаваем значения при изменении формы
 FORM.addEventListener('change', calc);
-estatePriceSlider.noUiSlider.on('change.one', calc);
-initialFeeSlider.noUiSlider.on('change.one', calc);
-creditTermSlider.noUiSlider.on('change.one', calc);
+estatePriceSlider.noUiSlider.on('change', calc);
+initialFeeSlider.noUiSlider.on('change', calc);
+creditTermSlider.noUiSlider.on('change', calc);

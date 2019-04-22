@@ -11,6 +11,7 @@ noUiSlider.create(estatePriceSlider, {
   connect: [true, false],
   step: 0.1,
   orientation: "horizontal", // 'horizontal' or 'vertical'
+  animate: false,
   range: {
     min: 1,
     max: 20
@@ -38,6 +39,7 @@ noUiSlider.create(initialFeeSlider, {
   connect: [true, false],
   step: 0.1,
   orientation: "horizontal", // 'horizontal' or 'vertical'
+  animate: false,
   range: {
     min: 0,
     max: 20
@@ -65,6 +67,7 @@ noUiSlider.create(creditTermSlider, {
   connect: [true, false],
   step: 1,
   orientation: "horizontal", // 'horizontal' or 'vertical'
+  animate: false,
   range: {
     min: 5,
     max: 50
@@ -83,4 +86,42 @@ creditTermSlider.noUiSlider.on('update', (values, handle) => {
 
 creditTermInputFormat.addEventListener('change', () => {
   creditTermSlider.noUiSlider.set(this.value);
+});
+
+
+
+var lockedState = true;
+var lockedSlider = true;
+
+// lockedValues = [
+//   Number(estatePriceSlider.noUiSlider.get()),
+//   Number(initialFeeSlider.noUiSlider.get())
+// ]
+
+function crossUpdate(value, slider) {
+  if ((Number(initialFeeSlider.noUiSlider.get()) > Number(estatePriceSlider.noUiSlider.get()))) {
+    // If the sliders aren't interlocked, don't
+    // cross-update.
+    if (!lockedState) return;
+
+    // // Select whether to increase or decrease
+    // // the other slider value.
+    // var a = estatePriceSlider === slider ? 0 : 1;
+
+    // // Invert a
+    // var b = a ? 0 : 1;
+
+    // value -= lockedValues[b] - lockedValues[a];
+
+    // Set the value
+    slider.noUiSlider.set(value);
+  }
+}
+
+estatePriceSlider.noUiSlider.on('slide', function (values, handle) {
+  crossUpdate(values[handle], initialFeeSlider);
+});
+
+initialFeeSlider.noUiSlider.on('slide', function (values, handle) {
+  crossUpdate(values[handle], estatePriceSlider);
 });
