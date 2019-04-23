@@ -89,7 +89,8 @@ creditTermInputFormat.addEventListener('change', () => {
 });
 
 
-
+// Связываем слайдеры initialFeeSlider и estatePriceSlider так, чтобы initialFeeSlider не
+// мог быть больше, чем estatePriceSlider
 function crossUpdate(value, slider) {
   value = Number(value);
   let slider1Val = Number(estatePriceSlider.noUiSlider.get());
@@ -99,9 +100,9 @@ function crossUpdate(value, slider) {
   if (slider2Val > slider1Val - difference) {
 
     if(initialFeeSlider === slider)
-      value = value - difference
+      value -= difference
     else
-      value = value + difference
+      value += difference
     
     // Set the value
     slider.noUiSlider.set(value);
