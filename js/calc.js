@@ -87,33 +87,22 @@ function calc(event) {
 
     for (key in resultArray) {
 
-      if (key % 2 === 0) {
-      resultHTML.insertAdjacentHTML('beforeend', `
+      animationEffect = (key % 2 === 0) ? "fadeInLeft" : "fadeInRight";
+
+      resultHTML.insertAdjacentHTML('beforeend',
+        `
         <tr>
           <th scope="row">${Number(key) + 1}</th>
-          <td class="animated fadeInLeft faster">${resultArray[key].name}</td>
-          <td class="animated fadeInLeft faster">${resultArray[key].percent}%</td>
-          <td class="animated fadeInLeft faster">${resultArray[key].monthlyPayment} руб</td>
-          <td class="animated fadeInLeft faster">${resultArray[key].insurance} руб</td>
-          <td class="animated fadeInLeft faster">${resultArray[key].price} руб</td>
-          <td class="animated fadeInLeft faster">${resultArray[key].pay} руб</td>
-          <td class="animated fadeInLeft faster">${resultArray[key].years} лет</td>
+          <td class="animated ${animationEffect} faster">${resultArray[key].name}</td>
+          <td class="animated ${animationEffect} faster">${resultArray[key].percent}%</td>
+          <td class="animated ${animationEffect} faster">${resultArray[key].monthlyPayment} руб</td>
+          <td class="animated ${animationEffect} faster">${resultArray[key].insurance} руб</td>
+          <td class="animated ${animationEffect} faster">${resultArray[key].price} руб</td>
+          <td class="animated ${animationEffect} faster">${resultArray[key].pay} руб</td>
+          <td class="animated ${animationEffect} faster">${resultArray[key].years} лет</td>
         </tr>
-      `);
-      } else {
-        resultHTML.insertAdjacentHTML('beforeend', `
-        <tr>
-          <th scope="row">${Number(key) + 1}</th>
-          <td class="animated fadeInRight faster">${resultArray[key].name}</td>
-          <td class="animated fadeInRight faster">${resultArray[key].percent}%</td>
-          <td class="animated fadeInRight faster">${resultArray[key].monthlyPayment} руб</td>
-          <td class="animated fadeInRight faster">${resultArray[key].insurance} руб</td>
-          <td class="animated fadeInRight faster">${resultArray[key].price} руб</td>
-          <td class="animated fadeInRight faster">${resultArray[key].pay} руб</td>
-          <td class="animated fadeInRight faster">${resultArray[key].years} лет</td>
-        </tr>
-      `);
-      }
+        `
+      );
     
     }
 

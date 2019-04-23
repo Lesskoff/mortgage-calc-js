@@ -99,7 +99,7 @@ var lockedSlider = true;
 // ]
 
 function crossUpdate(value, slider) {
-  if ((Number(initialFeeSlider.noUiSlider.get()) > Number(estatePriceSlider.noUiSlider.get()))) {
+  if ((Number(estatePriceSlider.noUiSlider.get()) < Number(initialFeeSlider.noUiSlider.get()))) {
     // If the sliders aren't interlocked, don't
     // cross-update.
     if (!lockedState) return;
