@@ -90,29 +90,19 @@ creditTermInputFormat.addEventListener('change', () => {
 
 
 
-var lockedState = true;
-var lockedSlider = true;
-
-// lockedValues = [
-//   Number(estatePriceSlider.noUiSlider.get()),
-//   Number(initialFeeSlider.noUiSlider.get())
-// ]
-
 function crossUpdate(value, slider) {
-  if ((Number(estatePriceSlider.noUiSlider.get()) < Number(initialFeeSlider.noUiSlider.get()))) {
-    // If the sliders aren't interlocked, don't
-    // cross-update.
-    if (!lockedState) return;
+  value = Number(value);
+  let slider1Val = Number(estatePriceSlider.noUiSlider.get());
+  let slider2Val = Number(initialFeeSlider.noUiSlider.get());
+  var difference = slider2Val / slider1Val;
 
-    // // Select whether to increase or decrease
-    // // the other slider value.
-    // var a = estatePriceSlider === slider ? 0 : 1;
+  if (slider2Val > slider1Val - difference) {
 
-    // // Invert a
-    // var b = a ? 0 : 1;
-
-    // value -= lockedValues[b] - lockedValues[a];
-
+    if(initialFeeSlider === slider)
+      value = value - difference
+    else
+      value = value + difference
+    
     // Set the value
     slider.noUiSlider.set(value);
   }
