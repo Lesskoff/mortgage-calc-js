@@ -2,7 +2,7 @@ const URL = '../db/db.json';
 
 const FORM = document.querySelector('#calc-form');
 
-function calc(event) {
+calc = event => {
 
   // console.log(event.type, event.target);
 

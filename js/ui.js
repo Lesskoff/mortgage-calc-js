@@ -1,11 +1,11 @@
 // document.addEventListener('DOMContentLoaded', function() {
 
 // Инициализация Materialize-select
-var elems = document.querySelectorAll('select');
-var instances = M.FormSelect.init(elems /*, options */);
+const elems = document.querySelectorAll('select');
+const instances = M.FormSelect.init(elems /*, options */);
 
 // Стоимость недвижимости - слайдер
-var estatePriceSlider = document.getElementById("estate-price-slider");
+const estatePriceSlider = document.getElementById("estate-price-slider");
 noUiSlider.create(estatePriceSlider, {
   start: 5,
   connect: [true, false],
@@ -22,7 +22,7 @@ noUiSlider.create(estatePriceSlider, {
 });
 
 // Инициализация input для слайдера стоимости недвижимости
-var estatePriceInputFormat = document.getElementById('estate-price-input');
+const estatePriceInputFormat = document.getElementById('estate-price-input');
 
 estatePriceSlider.noUiSlider.on('update', (values, handle) => {
   estatePriceInputFormat.value = values[handle];
@@ -33,7 +33,7 @@ estatePriceInputFormat.addEventListener('change', () => {
 });
 
 // Первоначальный взнос - слайдер
-var initialFeeSlider = document.getElementById("initial-fee-slider");
+const initialFeeSlider = document.getElementById("initial-fee-slider");
 noUiSlider.create(initialFeeSlider, {
   start: 0.5,
   connect: [true, false],
@@ -50,7 +50,7 @@ noUiSlider.create(initialFeeSlider, {
 });
 
 // Инициализация input для слайдера первоначального взноса
-var initialFeeInputFormat = document.getElementById('initial-fee-input');
+const initialFeeInputFormat = document.getElementById('initial-fee-input');
 
 initialFeeSlider.noUiSlider.on('update', (values, handle) => {
   initialFeeInputFormat.value = values[handle];
@@ -61,7 +61,7 @@ initialFeeInputFormat.addEventListener('change', () => {
 });
 
 // Срок кредита - слайдер
-var creditTermSlider = document.getElementById("credit-term-slider");
+const creditTermSlider = document.getElementById("credit-term-slider");
 noUiSlider.create(creditTermSlider, {
   start: 15,
   connect: [true, false],
@@ -78,7 +78,7 @@ noUiSlider.create(creditTermSlider, {
 });
 
 // Инициализация input для слайдера срока кредита
-var creditTermInputFormat = document.getElementById('credit-term-input');
+const creditTermInputFormat = document.getElementById('credit-term-input');
 
 creditTermSlider.noUiSlider.on('update', (values, handle) => {
   creditTermInputFormat.value = values[handle];
@@ -95,7 +95,7 @@ function crossUpdate(value, slider) {
   value = Number(value);
   let slider1Val = Number(estatePriceSlider.noUiSlider.get());
   let slider2Val = Number(initialFeeSlider.noUiSlider.get());
-  var difference = slider2Val / slider1Val;
+  let difference = slider2Val / slider1Val;
 
   if (slider2Val > slider1Val - difference) {
 
